@@ -12,7 +12,7 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
-  let intialGuesses = range(0, NUM_OF_GUESSES_ALLOWED).map(() => "     ");
+  let intialGuesses = range(0, NUM_OF_GUESSES_ALLOWED).map(() => "");
   const [guesses, setGuesses] = React.useState(intialGuesses);
   const [guessCount, setGuessCount] = React.useState(0);
 
@@ -29,7 +29,7 @@ function Game() {
 
   return (
     <>
-      <GuessList guesses={guesses} />
+      <GuessList guesses={guesses} answer={answer} />
       <GuessInput onGuess={onGuess} />
     </>
   );
