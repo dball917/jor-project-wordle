@@ -6,7 +6,6 @@ function GuessInput({ onGuess }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    console.log({ guess });
     setGuess("");
     onGuess(guess);
   }
